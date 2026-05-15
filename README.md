@@ -1,47 +1,40 @@
-
-# DSFolio
+# Mi Portafolio
 
 <center>
-    <img src="/public/cover.png" alt="DSFolio" />
+    <img src="/public/photo.webp" alt="Yair Torres" width="200" style="border-radius: 50%" />
 </center>
 
 <center>
 
-[https://dsfolio-v1.vercel.app/](https://dsbalico.vercel.app/)
+[https://yairctt.github.io/my-portfolio/](https://yairctt.github.io/my-portfolio/)
 
 </center>
 
-## Technologies Used
-<img  src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,netlify&perline=7"/>
+## Tecnologías Utilizadas
+<img  src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,vite&perline=7"/>
 
-## Installation
-1. Clone the repository
+## Instalación
+1. Clona el repositorio
     ```bash 
-    git clone https://github.com/dsbalico/dsfolio-v1.git
+    git clone https://github.com/yairctt/my-portfolio.git
     ```
-2. Change into the project directory
+2. Entra al directorio
     ```bash
-    cd dsfolio-v1
+    cd my-portfolio
     ```
-3. Install dependencies
+3. Instala las dependencias
     ```bash
-    yarn install 
+    npm install 
     ```
 
-## Usage
-To start the development server and view the project in your browser, run the following command:
+## Uso
+Para iniciar el servidor de desarrollo:
 ```bash
-yarn dev
+npm run dev
 ```
-Visit http://localhost:5173/ in your browser
 
-## Configurations
-- You can change content of the website at `/data/user_info.js`
-- Change the Google Analytics MEASUREMENT ID at `index.html` to your own.
+## Créditos
+Basado en la plantilla de Daniel Shan Balico.
 
-## Contributing
-Feel free to contribute to this project by opening issues or submitting pull requests. Your feedback is highly appreciated!
-
-## Note
-- Before deploying this website, please remove or update the Google Analytics MEASUREMENT ID in `index.html`
-- If you find this project useful, consider leaving a star. Thank you! 😊
+## Licencia
+Este proyecto es de uso libre.
