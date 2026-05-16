@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://yairctt.github.io/my-portfolio/">
-    <img src="https://img.shields.io/badge/Demo-Live_Project-blue?style=for-the-badge&logo=vercel" alt="Live Demo" />
-  </a>
+  <a href="https://yair-portfolio-seven.vercel.app/">
+  <img src="https://img.shields.io/badge/Portfolio-Live_Website-blue?style=for-the-badge&logo=vercel" />
+</a>
   <a href="https://www.linkedin.com/in/yairctt/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
   </a>
@@ -28,7 +28,7 @@ Estudiante de **Ingeniería en Sistemas Computacionales** enfocado en desarrollo
 ## Tecnologías y Herramientas
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,java,bootstrap,react,tailwind,vite,git,github,vercel,cloudflare,vscode&perline=7" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap,nodejs,java,python,git,github,vercel,cloudflare,vscode&perline=7" />
 </p>
 
 ---
@@ -53,44 +53,7 @@ Compilador robusto para un lenguaje personalizado.
 
 ---
 
-## Instalación y Uso Local
-
-Sigue estos pasos para ejecutar el proyecto en tu máquina local:
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/yairctt/my-portfolio.git
-   ```
-
-2. **Entra al directorio:**
-   ```bash
-   cd my-portfolio
-   ```
-
-3. **Instalar dependencias:**
-   ```bash
-   npm install
-   ```
-
-4. **Iniciar el entorno de desarrollo:**
-   ```bash
-   npm run dev
-   ```
-
----
-
-## Despliegue
-
-Este proyecto está optimizado para ser desplegado en **Vercel** o **GitHub Pages**.
-
-Para generar la versión de producción:
-```bash
-npm run build
-```
-
----
-
-## 📧 Contacto
+## Contacto
 
 ¿Te interesa mi trabajo? ¡Hablemos!
 
