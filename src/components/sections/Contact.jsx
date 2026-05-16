@@ -3,7 +3,7 @@ import { AppContext } from "../../App.jsx";
 import user_info from "../../data/user_info.js";
 import user_info_es from "../../data/user_info_es.js";
 
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -53,6 +53,15 @@ function Contact() {
         >
           <FaLinkedin className="self-center text-lg text-red-800 dark:text-red-500" />
           <span className="self-center">{data.ui.contact.linkedin}</span>
+        </a>
+
+        {/* =========== GITHUB =========== */}
+        <a
+          href={data.socials.github}
+          className="flex gap-4 text-zinc-600 dark:text-zinc-300 hover:dark:text-zinc-300 hover:text-zinc-700 transition-all duration-300 mt-4"
+        >
+          <FaGithub className="self-center text-lg text-red-800 dark:text-red-500" />
+          <span className="self-center">{data.ui.contact.github}</span>
         </a>
       </div>
 

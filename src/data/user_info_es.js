@@ -2,7 +2,7 @@ const info_es = {
     // ============ MAIN DETAILS ============
     main: {
         name: "Yair Torres",
-        description: "Soy estudiante de Ingeniería en Sistemas Computacionales con experiencia en el desarrollo de sitios web responsivos, plataformas académicas y proyectos de software utilizando JavaScript, Node.js, Java y servicios en la nube. Disfruto crear interfaces limpias, resolver problemas técnicos y aprender nuevas tecnologías a través de proyectos reales.",
+        description: "Estudiante de Ingeniería en Sistemas Computacionales enfocado en desarrollo web full-stack, arquitecturas basadas en la nube e ingeniería de software. Con experiencia en la creación de plataformas responsivas, sistemas de automatización y aplicaciones escalables utilizando JavaScript, Node.js, Java y servicios modernos en la nube.",
         role: "Desarrollador Web y Estudiante de Ing. en Sistemas",
         photo: "../photo.webp",
         email: "yaircruztorres@gmail.com",
@@ -19,39 +19,39 @@ const info_es = {
     // ============ PROJECTS ============
     projects: [
         {
-            title: "ISC Tech Tutoring Platform",
-            description: "Plataforma web educativa diseñada para la gestión de tutorías, distribución de recursos y comunicación automatizada.",
-            technologies: "HTML5, CSS3, JavaScript, Node.js, Vercel Functions, Cloudflare R2, Upstash Redis, Nodemailer, Gemini API, Bootstrap 5",
-            github: "https://github.com/yairctt",
-            link: "https://github.com/yairctt"
+            title: "Tutorías ISC",
+            description: "Plataforma educativa full-stack de alto rendimiento construida sobre arquitectura serverless. Incluye un asistente de IA con RAG, gestión de almacenamiento en Cloudflare R2, persistencia basada en Redis y una interfaz glassmorphism premium optimizada para accesibilidad y flujos de trabajo académicos.",
+            technologies: "HTML5, CSS3, JavaScript, Node.js, Vercel Functions, Cloudflare R2, Upstash Redis, Resend, Gemini API, Bootstrap 5",
+            github: "https://github.com/yairctt/tutorias-isc-itver",
+            link: "https://tutoriasisc.com"
         },
         {
             title: "Giang Aluminum",
-            description: "Sitio web profesional desarrollado para un cliente real, con diseño responsivo, despliegue e integración con Workspace.",
+            description: "Plataforma web personalizada desarrollada para una empresa de servicios de construcción. Construida con arquitectura vanilla (sin frameworks) para maximizar el rendimiento y el SEO. Incluye un backend serverless para gestión de leads y una robusta integración con Google Workspace para la automatización de flujos de trabajo.",
             technologies: "HTML, CSS, JavaScript, Google Workspace, Vercel",
-            github: "https://github.com/yairctt",
-            link: "https://github.com/yairctt"
-        },
-        {
-            title: "Custom Compiler in Java",
-            description: "Proyecto de compilador desarrollado con JavaCC, capaz de realizar análisis léxico y sintáctico para una implementación de lenguaje personalizado.",
-            technologies: "Java, JavaCC, Compiler Design",
-            github: "https://github.com/yairctt",
-            link: "https://github.com/yairctt"
-        },
-        {
-            title: "Java Mini Game",
-            description: "Pequeño juego en Java desarrollado utilizando hilos y conceptos de programación orientada a objetos.",
-            technologies: "Java, Threads, OOP",
-            github: "https://github.com/yairctt",
-            link: "https://github.com/yairctt"
+            github: "https://github.com/yairctt/web-giang-aluminum",
+            link: "https://giangaluminum.com"
         },
         {
             title: "Corazón de Coco",
-            description: "Página de aterrizaje responsiva enfocada en la presentación visual y el diseño frontend moderno.",
+            description: "Sitio web multipágina responsivo diseñado para mostrar productos de panadería artesanal mediante arquitectura frontend moderna, estética visual premium y una experiencia de usuario fluida alineada con la identidad de la marca.",
             technologies: "HTML, CSS, JavaScript",
-            github: "https://github.com/yairctt",
-            link: "https://github.com/yairctt"
+            github: "https://github.com/yairctt/web-corazon-de-coco",
+            link: "https://corazondcoco.com"
+        },
+        {
+            title: "FAX Optimizing Compiler",
+            description: "Implementación robusta de un compilador capaz de transformar un lenguaje personalizado (FAX) en código C ejecutable. Cuenta con un motor de optimización avanzado mediante análisis de flujo de datos (Análisis de Vivacidad) para eliminación global de código muerto y movimiento de código invariante en bucles, mejorando la eficiencia general del programa objetivo.",
+            technologies: "Java, JavaCC, Compiler Design",
+            github: "https://github.com/yairctt/CompiladorFax",
+            link: "https://github.com/yairctt/CompiladorFax"
+        },
+        {
+            title: "NavyFax",
+            description: "Aplicación Java interactiva construida bajo el patrón arquitectónico MVC, implementando conceptos avanzados de multithreading y concurrencia. El sistema gestiona enemigos, proyectiles, obstáculos y detección de colisiones mediante hilos de ejecución independientes, garantizando una jugabilidad fluida y responsiva. Incluye gestión dinámica de recursos, manejo de estados del juego y una arquitectura escalable basada en interfaces y herencia.",
+            technologies: "Java, Multithreading, OOP",
+            github: "https://github.com/yairctt/NavyFaxBeta",
+            link: "https://github.com/yairctt/NavyFaxBeta"
         },
     ],
 
@@ -120,6 +120,7 @@ const info_es = {
             facebook: "Seguir en Facebook",
             instagram: "Seguir en Instagram",
             linkedin: "Seguir en LinkedIn",
+            github: "Seguir en GitHub",
         },
         footer: {
             backToTop: "Volver arriba",
