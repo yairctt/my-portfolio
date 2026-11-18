@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 import { TbCheck, TbCopy } from "react-icons/tb";
 
 const linkClass =
-  "flex gap-4 text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 hover:dark:text-white transition-all duration-300";
+  "inline-flex gap-4 text-zinc-600 dark:text-zinc-300 hover:text-zinc-900 hover:dark:text-white transition-all duration-300";
 
 function Contact() {
   const { lang } = useContext(AppContext);
@@ -61,7 +61,7 @@ function Contact() {
       <hr className="mt-6 w-72 border dark:border-zinc-800" />
 
       {/* =========== LINKS =========== */}
-      <div className="mt-6">
+      <div className="mt-6 flex flex-col items-start gap-4">
         {/* =========== LINKEDIN =========== */}
         <a href={data.socials.linkedin} target="_blank" rel="noopener noreferrer" className={linkClass}>
           <FaLinkedin className="self-center text-lg text-red-800 dark:text-red-500" />
@@ -69,7 +69,7 @@ function Contact() {
         </a>
 
         {/* =========== GITHUB =========== */}
-        <a href={data.socials.github} target="_blank" rel="noopener noreferrer" className={`${linkClass} mt-4`}>
+        <a href={data.socials.github} target="_blank" rel="noopener noreferrer" className={linkClass}>
           <FaGithub className="self-center text-lg text-red-800 dark:text-red-500" />
           <span className="self-center">{data.ui.contact.github}</span>
         </a>
