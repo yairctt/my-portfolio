@@ -4,6 +4,8 @@ import NotFound from './pages/404'
 import { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import "preline/preline";
+import user_info from './data/user_info.js';
+import user_info_es from './data/user_info_es.js';
 
 export const AppContext = createContext();
 
@@ -25,6 +27,7 @@ function App() {
 
     useEffect(() => {
         document.documentElement.lang = lang;
+        document.title = (lang === "es" ? user_info_es : user_info).ui.meta.title;
     }, [lang]);
 
     const switchLang = () => {
