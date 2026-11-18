@@ -1,10 +1,11 @@
 const info_es = {
     // ============ MAIN DETAILS ============
     main: {
-        name: "Yair Torres",
-        description: "Estudiante de Ingeniería en Sistemas Computacionales enfocado en desarrollo web full-stack, arquitecturas basadas en la nube e ingeniería de software. Con experiencia en la creación de plataformas responsivas, sistemas de automatización y aplicaciones escalables utilizando JavaScript, Node.js, Java y servicios modernos en la nube.",
-        role: "Desarrollador Web y Estudiante de Ing. en Sistemas",
+        name: "Yair Cruz Torres",
+        description: "Estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Veracruz (TecNM), con experiencia desarrollando software para proyectos institucionales y clientes. Trabajo en desarrollo web full-stack, APIs REST, bases de datos e inteligencia artificial aplicada, con proyectos en producción como el Portal de Tutorías ISC y MiTutorIA, un asistente con RAG y Gemini disponible para 212 alumnos.",
+        role: "Desarrollador de Software · Estudiante de Ing. en Sistemas Computacionales",
         photo: "../photo.webp",
+        cv: "/cv/CV_Yair_Cruz_Torres.pdf",
         email: "yaircruztorres@gmail.com",
     },
 
@@ -108,9 +109,9 @@ const info_es = {
     // ============ EDUCATION ============
     education: [
         {
-            school: "Instituto Tecnológico de Veracruz",
-            degree: "Ingeniería en Sistemas Computacionales",
-            duration: "2023 - Presente",
+            school: "Instituto Tecnológico de Veracruz (TecNM)",
+            degree: "Ingeniería en Sistemas Computacionales · Promedio 90.07",
+            duration: "2023 - 2027 (egreso estimado)",
             image: "itv.webp"
         },
     ],
@@ -118,31 +119,49 @@ const info_es = {
     // ============ EXPERIENCE ============
     experience: [
         {
-            position: "Desarrollador Web Frontend",
-            company: "Freelance Web Development",
-            duration: "2026 - Presente",
+            position: "Desarrollador Web Freelance",
+            company: "Desarrollo Web Freelance",
+            duration: "2025 - Presente",
             image: "freelancer.webp",
             descriptions: [
-                "Desarrollo de sitios web y páginas de aterrizaje responsivas para clientes reales.",
-                "Gestión de despliegue en Vercel e integración de servicios de terceros.",
-                "Uso de HTML, CSS y JavaScript para entregar resultados listos para producción.",
+                "Desarrollo de sitios web para clientes como Giang Aluminum y Corazón de Coco.",
+                "Despliegue en Vercel e integración de servicios de terceros.",
+                "Sitios responsivos con HTML, CSS y JavaScript listos para producción.",
             ]
         },
         {
-            position: "Desarrollador Estudiantil",
-            company: "Academic Software Projects",
-            duration: "2023 - Presente",
+            position: "Web Developer",
+            company: "GMayaS Digital Services",
+            duration: "2026",
+            image: "gmayas.webp",
+            descriptions: [
+                "Desarrollo full-stack de soluciones y plataformas web.",
+                "Integración de servicios y APIs de terceros.",
+                "Mantenimiento y optimización de rendimiento.",
+            ]
+        },
+        {
+            position: "Servicio Social",
+            company: "Coordinación de Tutorías ISC · ITVer",
+            duration: "2025 - 2026",
             image: "itv.webp",
             descriptions: [
-                "Construcción de plataformas educativas con Node.js, almacenamiento en la nube y correo automatizado.",
-                "Desarrollo de aplicaciones Java incluyendo un compilador y un minijuego orientado a objetos.",
-                "Implementación de herramientas de automatización y trabajo con servicios en la nube.",
+                "Desarrollo, despliegue y mantenimiento del portal web de la Coordinación de Tutorías del Depto. de Sistemas y Computación.",
+                "Desarrollo de MiTutorIA: chatbot con RAG y Gemini más objetos de aprendizaje para Tutoría I y II.",
+                "Plataforma en producción, disponible para 212 alumnos.",
             ]
         },
     ],
 
     // ============ CERTIFICATES ============
-    certificates: [],
+    certificates: [
+        {
+            title: "CCNA: Switching, Routing, and Wireless Essentials",
+            description: "Cisco Networking Academy · Agosto 2026",
+            icon: "cisco",
+            link: "/certificates/CCNA_Switching_Routing_Wireless_Essentials.pdf"
+        },
+    ],
 
     // ============ CONTACT ============
     contact: {
@@ -165,9 +184,12 @@ const info_es = {
         },
         nav: {
             projects: "Proyectos",
+            downloadCv: "Descargar CV",
             contact: "Contacto",
         },
         sections: {
+            certificates: "Certificaciones",
+            openCertificate: "Ver certificado",
             projects: "Proyectos",
             education: "Educación",
             experience: "Experiencia",

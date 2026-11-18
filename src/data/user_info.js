@@ -1,10 +1,11 @@
 const info = {
     // ============ MAIN DETAILS ============
     main: {
-        name: "Yair Torres",
-        description: "Computer Systems Engineering student focused on full-stack web development, cloud-based architectures, and software engineering. Experienced in building responsive platforms, automation systems, and scalable applications using JavaScript, Node.js, Java, and modern cloud services.",
-        role: "Web Developer & Systems Engineering Student",
+        name: "Yair Cruz Torres",
+        description: "Computer Systems Engineering student at the Instituto Tecnológico de Veracruz (TecNM), with experience building software for institutional projects and clients. I work on full-stack web development, REST APIs, databases, and applied AI, with projects in production such as the ISC Tutoring Portal and MiTutorIA, an AI assistant built with RAG and Gemini available to 212 students.",
+        role: "Software Developer · Computer Systems Engineering Student",
         photo: "../photo.webp",
+        cv: "/cv/CV_Yair_Cruz_Torres.pdf",
         email: "yaircruztorres@gmail.com",
     },
 
@@ -108,9 +109,9 @@ const info = {
     // ============ EDUCATION ============
     education: [
         {
-            school: "Instituto Tecnológico de Veracruz",
-            degree: "Bachelor's Degree in Computer Systems Engineering",
-            duration: "2023 - Present",
+            school: "Instituto Tecnológico de Veracruz (TecNM)",
+            degree: "Bachelor's Degree in Computer Systems Engineering · GPA 90.07",
+            duration: "2023 - 2027 (expected graduation)",
             image: "itv.webp"
         },
     ],
@@ -118,31 +119,49 @@ const info = {
     // ============ EXPERIENCE ============
     experience: [
         {
-            position: "Frontend Web Developer",
+            position: "Freelance Web Developer",
             company: "Freelance Web Development",
-            duration: "2026 - Present",
+            duration: "2025 - Present",
             image: "freelancer.webp",
             descriptions: [
-                "Developed responsive websites and landing pages for real clients.",
-                "Handled deployment using Vercel and integrated third-party services.",
-                "Used HTML, CSS, and JavaScript to deliver production-ready results.",
+                "Built websites for clients such as Giang Aluminum and Corazón de Coco.",
+                "Handled deployment on Vercel and integrated third-party services.",
+                "Delivered production-ready responsive sites with HTML, CSS, and JavaScript.",
             ]
         },
         {
-            position: "Student Developer",
-            company: "Academic Software Projects",
-            duration: "2023 - Present",
+            position: "Web Developer",
+            company: "GMayaS Digital Services",
+            duration: "2026",
+            image: "gmayas.webp",
+            descriptions: [
+                "Full-stack development of web solutions and platforms.",
+                "Integration of third-party services and APIs.",
+                "Maintenance and performance optimization.",
+            ]
+        },
+        {
+            position: "Social Service",
+            company: "ISC Tutoring Coordination · ITVer",
+            duration: "2025 - 2026",
             image: "itv.webp",
             descriptions: [
-                "Built educational platforms with Node.js, cloud storage, and automated email.",
-                "Developed Java applications including a compiler and an OOP-based mini game.",
-                "Implemented automation tools and worked with cloud-based services.",
+                "Developed, deployed, and maintained the web portal for the Computer Systems Department's Tutoring Coordination office.",
+                "Built MiTutorIA: a RAG and Gemini chatbot plus learning objects for Tutoring I and II.",
+                "Platform in production, available to 212 students.",
             ]
         },
     ],
 
     // ============ CERTIFICATES ============
-    certificates: [],
+    certificates: [
+        {
+            title: "CCNA: Switching, Routing, and Wireless Essentials",
+            description: "Cisco Networking Academy · Aug 2026",
+            icon: "cisco",
+            link: "/certificates/CCNA_Switching_Routing_Wireless_Essentials.pdf"
+        },
+    ],
 
     // ============ CONTACT ============
     contact: {
@@ -165,9 +184,12 @@ const info = {
         },
         nav: {
             projects: "Projects",
+            downloadCv: "Download CV",
             contact: "Contact",
         },
         sections: {
+            certificates: "Certificates",
+            openCertificate: "Open Certificate",
             projects: "Projects",
             education: "Education",
             experience: "Experience",

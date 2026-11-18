@@ -3,6 +3,7 @@ import { AppContext } from "../../App.jsx";
 import user_info from "../../data/user_info.js";
 import user_info_es from "../../data/user_info_es.js";
 import { IoIosArrowForward } from "react-icons/io";
+import { TbDownload } from "react-icons/tb";
 
 function Hero() {
   const { lang } = useContext(AppContext);
@@ -34,12 +35,20 @@ function Hero() {
               {data.main.description}
             </p>
 
-            <div className="flex gap-2 mt-6">
+            <div className="flex flex-wrap gap-2 mt-6">
               <a
                 href="#projects"
                 className="px-6 py-3 border border-black hover:bg-red-800 hover:text-white hover:border-red-800 dark:border-white font-medium transition-all duration-300"
               >
                 {data.ui.nav.projects}
+              </a>
+              <a
+                href={data.main.cv}
+                download="CV_Yair_Cruz_Torres.pdf"
+                className="px-6 py-3 border border-black hover:bg-red-800 hover:text-white hover:border-red-800 dark:border-white font-medium transition-all duration-300 flex gap-2 items-center"
+              >
+                <TbDownload className="text-lg" aria-hidden="true" />
+                {data.ui.nav.downloadCv}
               </a>
               <a
                 href="#contact"
