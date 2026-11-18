@@ -13,8 +13,6 @@ const info = {
     socials: {
         github: "https://github.com/yairctt",
         linkedin: "https://www.linkedin.com/in/yairctt/",
-        instagram: "https://www.instagram.com/yairctt/",
-        facebook: "https://www.facebook.com/yair.torres.568632",
     },
 
     // ============ PROJECTS ============
@@ -166,7 +164,7 @@ const info = {
     // ============ CONTACT ============
     contact: {
         title: "Let's Get in Touch: Ways to Connect with Me",
-        description: "Thank you for visiting my portfolio. If you are interested in collaborating, discussing a project, or simply connecting, feel free to reach out through email or social media. I'm always open to learning opportunities, new projects, and meaningful conversations about technology and development.",
+        description: "Thank you for visiting my portfolio. If you are interested in collaborating, discussing a project, or simply connecting, feel free to reach out through email or LinkedIn. I'm always open to learning opportunities, new projects, and meaningful conversations about technology and development.",
     },
 
     // ============ FOOTER ============
@@ -174,6 +172,10 @@ const info = {
 
     // ============ UI LABELS ============
     ui: {
+        hero: {
+            greeting: "Hi, thanks for visiting my portfolio",
+            photoAlt: "Photo of Yair Cruz Torres",
+        },
         projects: {
             viewProject: "Live Site",
             viewGithub: "View Github",
@@ -198,9 +200,9 @@ const info = {
         contact: {
             title: "Let's Get in Touch:",
             subtitle: "Ways to Connect with Me",
-            facebook: "Follow on Facebook",
-            instagram: "Follow on Instagram",
-            linkedin: "Follow on LinkedIn",
+            copyEmail: "Copy email",
+            emailCopied: "Email copied",
+                    linkedin: "Follow on LinkedIn",
             github: "Follow on GitHub",
         },
         footer: {
