@@ -1,6 +1,8 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { CiLink } from "react-icons/ci";
 import { FiCode } from "react-icons/fi";
+import { TbMaximize } from "react-icons/tb";
+import Lightbox from "./Lightbox.jsx";
 
 const linkClass =
   "flex gap-2 hover:text-red-800 hover:dark:text-red-500 cursor-pointer transition-all duration-300";
@@ -29,32 +31,35 @@ function LockIcon() {
   );
 }
 
-function ProjectImage({ image, title, link }) {
-  const frame = "relative block overflow-hidden bg-zinc-100 dark:bg-zinc-900 aspect-[16/10] rounded-t-xl";
+function ProjectImage({ image, title, onEnlarge, enlargeLabel }) {
+  const frame = "relative block w-full overflow-hidden bg-zinc-100 dark:bg-zinc-900 aspect-[16/10] rounded-t-xl";
 
-  const content = image ? (
-    <img
-      src={image}
-      alt={title}
-      loading="lazy"
-      decoding="async"
-      className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
-    />
-  ) : (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-red-50 to-zinc-100 dark:from-red-900/20 dark:to-zinc-900 text-red-800 dark:text-red-500">
-      <FiCode className="text-4xl" aria-hidden="true" />
-      <span className="px-6 text-center text-sm font-semibold text-zinc-600 dark:text-zinc-300">{title}</span>
-    </div>
-  );
-
-  if (isValidUrl(link)) {
+  if (!image) {
     return (
-      <a href={link} target="_blank" rel="noopener noreferrer" className={frame} tabIndex={-1} aria-hidden="true">
-        {content}
-      </a>
+      <div className={frame}>
+        <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gradient-to-br from-red-50 to-zinc-100 dark:from-red-900/20 dark:to-zinc-900 text-red-800 dark:text-red-500">
+          <FiCode className="text-4xl" aria-hidden="true" />
+          <span className="px-6 text-center text-sm font-semibold text-zinc-600 dark:text-zinc-300">{title}</span>
+        </div>
+      </div>
     );
   }
-  return <div className={frame}>{content}</div>;
+
+  return (
+    <button type="button" onClick={onEnlarge} className={`${frame} cursor-zoom-in`} aria-label={`${enlargeLabel}: ${title}`}>
+      <img
+        src={image}
+        alt={title}
+        loading="lazy"
+        decoding="async"
+        className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+      />
+      {/* zoom hint */}
+      <span className="absolute bottom-2 right-2 flex items-center justify-center size-8 rounded-full bg-black/55 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
+        <TbMaximize className="text-base" />
+      </span>
+    </button>
+  );
 }
 
 function Project({
@@ -69,6 +74,8 @@ function Project({
   labels,
 }) {
   const [expanded, setExpanded] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+  const closeZoom = useCallback(() => setZoomed(false), []);
   const [truncated, setTruncated] = useState(false);
   const descRef = useRef(null);
 
@@ -92,7 +99,8 @@ function Project({
       className="group h-full flex flex-col bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl hover:border-zinc-300 hover:dark:border-zinc-700 hover:shadow-lg hover:shadow-zinc-200/60 hover:dark:shadow-black/40 transition-all duration-300"
     >
       {/* =========== PREVIEW IMAGE =========== */}
-      <ProjectImage image={image} title={title} link={link} />
+      <ProjectImage image={image} title={title} onEnlarge={() => setZoomed(true)} enlargeLabel={labels.enlarge} />
+      {zoomed && <Lightbox src={image} title={title} closeLabel={labels.close} onClose={closeZoom} />}
 
       <div className="flex flex-col flex-1 p-6">
         {/* =========== PROJECT TITLE =========== */}

@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar.jsx";
 import BackToTop from "../components/BackToTop.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 import Hero from "../components/sections/Hero.jsx";
 import Projects from "../components/sections/Projects.jsx";
@@ -24,10 +25,10 @@ function Homepage() {
         <Navbar />
 
         <Hero />
-        <Projects />
-				<EducationAndExperience />
-        <Skills />
-        <Contact />
+        <Reveal><Projects /></Reveal>
+        <Reveal><EducationAndExperience /></Reveal>
+        <Reveal><Skills /></Reveal>
+        <Reveal><Contact /></Reveal>
 
         <hr className="mt-12 border border-zinc-300 dark:border-zinc-800" />
         <Footer />
