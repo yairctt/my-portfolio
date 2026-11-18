@@ -19,6 +19,7 @@ const info = {
     projects: [
         {
             title: "Tutorías ISC — Coordination Portal",
+            category: "institutional",
             role: "Full-stack developer",
             image: "/projects/tutorias-isc.webp",
             description: "Serverless academic management platform for the ISC Tutoring Coordination office at TecNM Veracruz. Automatically delivers certificates from Cloudflare R2 to each student's institutional email through an endpoint with multi-layered security. Includes a tutor search tool, a unified authentication and Redis-based profile system, and an admin dashboard on a dedicated subdomain.",
@@ -28,6 +29,7 @@ const info = {
         },
         {
             title: "MiTutorIA — AI Tutoring Assistant",
+            category: "institutional",
             role: "Full-stack developer and AI integration",
             image: "/projects/mitutoria.webp",
             description: "AI assistant for ISC students built on RAG and the Gemini and DeepSeek models, delivering real-time responses via SSE streaming. Integrates 17 interactive Learning Objects from Tutoring I and II, and injects each student's progress into the assistant's context to tailor its answers.",
@@ -37,6 +39,7 @@ const info = {
         },
         {
             title: "Pulso Jarocho — 3rd Place Hackathon",
+            category: "hackathon",
             role: "Interactive map, QR validation, integration and deployment (team of 5)",
             image: "/projects/pulso-jarocho.webp",
             description: "Smart tourism PWA built in 24 hours at the Veracruz Tech Week 2026 Hackathon for \"Challenge 6 · Centro Vivo\", focused on revitalizing the Historic Center of Veracruz. Generates personalized routes based on the visitor's available time and interests, validates visits to local businesses through QR codes with single-use tokens verified on the server, and includes a metrics dashboard for local authorities. Five-person team; responsible for the interactive map, QR validation, integration, and deployment.",
@@ -46,6 +49,7 @@ const info = {
         },
         {
             title: "Academic Project Bank Management System",
+            category: "academic",
             role: "Full-stack developer",
             image: "/projects/banco-proyectos.webp",
             description: "Web system for managing the degree program's academic project bank, with four role-based portals and a complete workflow for project registration, approval, application, and assignment. Enforces business rules at the database level through constraints and triggers, uses locking transactions to prevent race conditions, and applies security through CSP headers, login lockout after repeated failed attempts, and secure sessions. Deployed to production on Hostinger.",
@@ -55,6 +59,7 @@ const info = {
         },
         {
             title: "InvitacionesLovi AI Chatbot",
+            category: "client",
             role: "Backend and AI developer",
             image: "/projects/invitacioneslovi.webp",
             description: "Multilingual AI chatbot for a digital invitations business, powered by Gemini with SSE streaming, business context via RAG, and file-based rate limiting. Deployed on DigitalOcean with Apache.",
@@ -64,6 +69,7 @@ const info = {
         },
         {
             title: "GoCheck — Attendance Control System",
+            category: "academic",
             image: "/projects/gocheck.webp",
             role: "Full-stack developer",
             description: "Client-server system for tracking staff attendance in grocery stores and supermarkets. The web terminal, designed for physical kiosks, lets employees record their four daily events (clock-in, lunch break, return, and clock-out) via QR code or PIN, with validation that prevents duplicate entries. The Node.js/Express REST API uses MySQL with a Primary/Replica pool, JWT authentication, BcryptJS hashing, rate limiting, and an audit log. Includes a dashboard with real-time KPIs: active employees, attendance, late arrivals, leaves, and absences.",
@@ -72,6 +78,7 @@ const info = {
         },
         {
             title: "Giang Aluminum",
+            category: "client",
             role: "Web developer (freelance)",
             image: "/projects/giang-aluminum.webp",
             description: "Custom web platform developed for a construction services company. Built with a vanilla architecture (without frameworks) to maximize performance and SEO. Includes a serverless backend for lead management and a robust Google Workspace integration for workflow automation.",
@@ -81,6 +88,7 @@ const info = {
         },
         {
             title: "Corazón de Coco",
+            category: "client",
             role: "Web developer (freelance)",
             image: "/projects/corazon-de-coco.webp",
             description: "Responsive multi-page website designed to showcase artisanal bakery products through modern frontend architecture, premium visual aesthetics, and a seamless user experience aligned with the brand identity.",
@@ -90,6 +98,7 @@ const info = {
         },
         {
             title: "FAX Optimizing Compiler",
+            category: "academic",
             image: "/projects/fax-compiler.webp",
             description: "Robust compiler implementation capable of transforming a custom language (FAX) into executable C code. Features an advanced optimization engine using data-flow analysis (Liveness Analysis) for global dead-code elimination and loop-invariant code motion, improving overall target program efficiency.",
             technologies: "Java, JavaCC, Compiler Design",
@@ -97,6 +106,7 @@ const info = {
         },
         {
             title: "NavyFax",
+            category: "academic",
             image: "/projects/navyfax.webp",
             description: "Interactive Java application built under the MVC architectural pattern, implementing advanced multithreading and concurrency concepts. The system manages enemies, projectiles, obstacles, and collision detection through independent execution threads, ensuring smooth and responsive gameplay. Includes dynamic resource management, game state handling, and a scalable architecture based on interfaces and inheritance.",
             technologies: "Java, Multithreading, OOP",
@@ -161,6 +171,37 @@ const info = {
         },
     ],
 
+    // ============ ACHIEVEMENTS ============
+    achievements: [
+        {
+            value: "3rd Place",
+            title: "Veracruz Tech Week 2026 Hackathon",
+            detail: "Pulso Jarocho, a tourism PWA built in 24 hours by a team of five.",
+        },
+        {
+            value: "212",
+            title: "Students with access",
+            detail: "ISC Tutoring Portal and MiTutorIA, both in production.",
+        },
+        {
+            value: "90.07",
+            title: "GPA",
+            detail: "Computer Systems Engineering, Instituto Tecnológico de Veracruz.",
+        },
+        {
+            value: "CCNA",
+            title: "Switching, Routing, and Wireless Essentials",
+            detail: "Cisco Networking Academy, 2026.",
+        },
+    ],
+
+    // ============ SOFT SKILLS & LANGUAGES ============
+    softSkills: ["Self-taught", "Problem analysis and solving", "Organization", "Teamwork", "Client communication"],
+    languages: [
+        { name: "Spanish", level: "Native" },
+        { name: "English", level: "Basic" },
+    ],
+
     // ============ CONTACT ============
     contact: {
         title: "Let's Get in Touch: Ways to Connect with Me",
@@ -177,6 +218,13 @@ const info = {
             photoAlt: "Photo of Yair Cruz Torres",
         },
         projects: {
+            filters: {
+                all: "All",
+                client: "Clients",
+                institutional: "Institutional",
+                academic: "Academic",
+                hackathon: "Hackathon",
+            },
             viewProject: "Live Site",
             viewGithub: "View Github",
             privateCode: "Private code",
@@ -190,6 +238,9 @@ const info = {
             contact: "Contact",
         },
         sections: {
+            achievements: "Achievements",
+            softSkills: "Soft Skills",
+            languages: "Languages",
             certificates: "Certificates",
             openCertificate: "Open Certificate",
             projects: "Projects",

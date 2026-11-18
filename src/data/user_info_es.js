@@ -19,6 +19,7 @@ const info_es = {
     projects: [
         {
             title: "Tutorías ISC — Portal de Coordinación",
+            category: "institutional",
             role: "Desarrollador full-stack",
             image: "/projects/tutorias-isc.webp",
             description: "Plataforma serverless de gestión académica para la Coordinación de Tutorías ISC del TecNM Veracruz. Envía automáticamente las constancias desde Cloudflare R2 al correo institucional del alumno mediante un endpoint con seguridad multicapa. Incluye buscador de tutores, sistema unificado de autenticación y perfiles en Redis, y panel administrativo en un subdominio dedicado.",
@@ -28,6 +29,7 @@ const info_es = {
         },
         {
             title: "MiTutorIA — Asistente de Tutoría con IA",
+            category: "institutional",
             role: "Desarrollador full-stack e integración de IA",
             image: "/projects/mitutoria.webp",
             description: "Asistente con IA para estudiantes de ISC, basado en RAG y en los modelos Gemini y DeepSeek, con respuestas en tiempo real vía streaming SSE. Integra 17 Objetos de Aprendizaje interactivos de Tutoría I y II, e inyecta el progreso de cada alumno en el contexto del asistente para adaptar sus respuestas.",
@@ -37,6 +39,7 @@ const info_es = {
         },
         {
             title: "Pulso Jarocho — 3er Lugar Hackathon",
+            category: "hackathon",
             role: "Mapa interactivo, validación QR, integración y despliegue (equipo de 5)",
             image: "/projects/pulso-jarocho.webp",
             description: "PWA de turismo inteligente desarrollada en 24 horas en el Hackathon Veracruz Tech Week 2026 para el \"Reto 6 · Centro Vivo\", enfocada en revitalizar el Centro Histórico de Veracruz. Genera rutas personalizadas según tiempo e intereses del visitante, valida visitas a comercios mediante códigos QR con tokens de un solo uso verificados en el servidor e incluye un tablero de métricas para autoridades. Equipo de 5 personas; responsable del mapa interactivo, la validación por QR, la integración y el despliegue.",
@@ -46,6 +49,7 @@ const info_es = {
         },
         {
             title: "Sistema de Gestión de Banco de Proyectos Académicos",
+            category: "academic",
             role: "Desarrollador full-stack",
             image: "/projects/banco-proyectos.webp",
             description: "Sistema web para administrar el banco de proyectos académicos de la carrera, con cuatro portales por rol y flujo completo de registro, aprobación, postulación y asignación de proyectos. Aplica reglas de negocio a nivel de base de datos con restricciones y triggers, transacciones con bloqueo para evitar condiciones de carrera, y seguridad con cabeceras CSP, bloqueo de login por intentos y sesiones seguras. Desplegado en producción en Hostinger.",
@@ -55,6 +59,7 @@ const info_es = {
         },
         {
             title: "Chatbot IA InvitacionesLovi",
+            category: "client",
             role: "Desarrollador backend e IA",
             image: "/projects/invitacioneslovi.webp",
             description: "Chatbot multilingüe con IA para un negocio de invitaciones digitales, con Gemini y streaming SSE, contexto del negocio vía RAG y rate limiting basado en archivos. Desplegado en DigitalOcean con Apache.",
@@ -64,6 +69,7 @@ const info_es = {
         },
         {
             title: "GoCheck — Sistema de Control de Asistencia",
+            category: "academic",
             image: "/projects/gocheck.webp",
             role: "Desarrollador full-stack",
             description: "Sistema cliente-servidor para el control de asistencia del personal en tiendas de abarrotes y supermercados. El terminal web, pensado para kioscos físicos, permite a los empleados registrar sus cuatro movimientos del día (entrada, salida a comida, regreso y salida) mediante código QR o PIN, con validación que impide registros duplicados. La API REST en Node.js/Express usa MySQL con pool Maestro/Réplica, autenticación JWT, cifrado con BcryptJS, rate limiting y bitácora de auditoría. Incluye un dashboard con KPIs en tiempo real: empleados activos, asistencias, retardos, permisos y faltas.",
@@ -72,6 +78,7 @@ const info_es = {
         },
         {
             title: "Giang Aluminum",
+            category: "client",
             role: "Desarrollador web (freelance)",
             image: "/projects/giang-aluminum.webp",
             description: "Plataforma web personalizada desarrollada para una empresa de servicios de construcción. Construida con arquitectura vanilla (sin frameworks) para maximizar el rendimiento y el SEO. Incluye un backend serverless para gestión de leads y una robusta integración con Google Workspace para la automatización de flujos de trabajo.",
@@ -81,6 +88,7 @@ const info_es = {
         },
         {
             title: "Corazón de Coco",
+            category: "client",
             role: "Desarrollador web (freelance)",
             image: "/projects/corazon-de-coco.webp",
             description: "Sitio web multipágina responsivo diseñado para mostrar productos de panadería artesanal mediante arquitectura frontend moderna, estética visual premium y una experiencia de usuario fluida alineada con la identidad de la marca.",
@@ -90,6 +98,7 @@ const info_es = {
         },
         {
             title: "FAX Optimizing Compiler",
+            category: "academic",
             image: "/projects/fax-compiler.webp",
             description: "Implementación robusta de un compilador capaz de transformar un lenguaje personalizado (FAX) en código C ejecutable. Cuenta con un motor de optimización avanzado mediante análisis de flujo de datos (Análisis de Vivacidad) para eliminación global de código muerto y movimiento de código invariante en bucles, mejorando la eficiencia general del programa objetivo.",
             technologies: "Java, JavaCC, Compiler Design",
@@ -97,6 +106,7 @@ const info_es = {
         },
         {
             title: "NavyFax",
+            category: "academic",
             image: "/projects/navyfax.webp",
             description: "Aplicación Java interactiva construida bajo el patrón arquitectónico MVC, implementando conceptos avanzados de multithreading y concurrencia. El sistema gestiona enemigos, proyectiles, obstáculos y detección de colisiones mediante hilos de ejecución independientes, garantizando una jugabilidad fluida y responsiva. Incluye gestión dinámica de recursos, manejo de estados del juego y una arquitectura escalable basada en interfaces y herencia.",
             technologies: "Java, Multithreading, OOP",
@@ -161,6 +171,37 @@ const info_es = {
         },
     ],
 
+    // ============ ACHIEVEMENTS ============
+    achievements: [
+        {
+            value: "3er lugar",
+            title: "Hackathon Veracruz Tech Week 2026",
+            detail: "Pulso Jarocho, PWA de turismo desarrollada en 24 horas con un equipo de 5.",
+        },
+        {
+            value: "212",
+            title: "Alumnos con acceso",
+            detail: "Portal de Tutorías ISC y MiTutorIA, ambos en producción.",
+        },
+        {
+            value: "90.07",
+            title: "Promedio",
+            detail: "Ingeniería en Sistemas Computacionales, Instituto Tecnológico de Veracruz.",
+        },
+        {
+            value: "CCNA",
+            title: "Switching, Routing, and Wireless Essentials",
+            detail: "Cisco Networking Academy, 2026.",
+        },
+    ],
+
+    // ============ SOFT SKILLS & LANGUAGES ============
+    softSkills: ["Autodidacta", "Análisis y resolución de problemas", "Organización", "Trabajo en equipo", "Comunicación con clientes"],
+    languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Básico" },
+    ],
+
     // ============ CONTACT ============
     contact: {
         title: "Conectemos: Formas de contactarme",
@@ -177,6 +218,13 @@ const info_es = {
             photoAlt: "Foto de Yair Cruz Torres",
         },
         projects: {
+            filters: {
+                all: "Todos",
+                client: "Clientes",
+                institutional: "Institucional",
+                academic: "Académicos",
+                hackathon: "Hackathon",
+            },
             viewProject: "Sitio en vivo",
             viewGithub: "Ver GitHub",
             privateCode: "Código privado",
@@ -190,6 +238,9 @@ const info_es = {
             contact: "Contacto",
         },
         sections: {
+            achievements: "Logros",
+            softSkills: "Habilidades",
+            languages: "Idiomas",
             certificates: "Certificaciones",
             openCertificate: "Ver certificado",
             projects: "Proyectos",
