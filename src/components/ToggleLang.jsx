@@ -1,9 +1,11 @@
 import { AppContext } from "../App.jsx";
 import { useContext } from "react";
 
+// Flags are drawn as inline SVG (not emoji) so they render the same on every OS.
+// preserveAspectRatio="slice" lets them fill the round knob.
 function FlagMX() {
     return (
-        <svg viewBox="0 0 30 20" className="w-5 h-[14px] rounded-[3px] shadow-sm ring-1 ring-black/10" aria-hidden="true">
+        <svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" className="w-full h-full" aria-hidden="true">
             <rect width="10" height="20" x="0" fill="#006847" />
             <rect width="10" height="20" x="10" fill="#FFFFFF" />
             <rect width="10" height="20" x="20" fill="#CE1126" />
@@ -23,7 +25,7 @@ function FlagUS() {
         }
     }
     return (
-        <svg viewBox="0 0 30 20" className="w-5 h-[14px] rounded-[3px] shadow-sm ring-1 ring-black/10" aria-hidden="true">
+        <svg viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice" className="w-full h-full" aria-hidden="true">
             <rect width="30" height="20" fill="#FFFFFF" />
             {Array.from({ length: 7 }, (_, i) => (
                 <rect key={i} y={i * 2 * stripe} width="30" height={stripe} fill="#B22234" />
@@ -34,43 +36,38 @@ function FlagUS() {
     );
 }
 
-const OPTIONS = [
-    { code: "es", label: "ES", Flag: FlagMX, name: "Español" },
-    { code: "en", label: "EN", Flag: FlagUS, name: "English" },
-];
-
 function ToggleLang() {
     const { lang, switchLang } = useContext(AppContext);
+    const isEn = lang === "en";
 
     return (
-        <div
-            role="group"
-            aria-label={lang === "es" ? "Idioma" : "Language"}
-            className="flex items-center p-0.5 rounded-full border border-zinc-200 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/80 backdrop-blur"
+        <button
+            type="button"
+            role="switch"
+            aria-checked={isEn}
+            onClick={switchLang}
+            aria-label={isEn ? "Language: English. Switch to Spanish" : "Idioma: Español. Cambiar a inglés"}
+            title={isEn ? "Cambiar a Español" : "Switch to English"}
+            className="relative flex items-center w-[68px] h-8 rounded-full border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors duration-300"
         >
-            {OPTIONS.map(({ code, label, Flag, name }) => {
-                const active = lang === code;
-                return (
-                    <button
-                        key={code}
-                        type="button"
-                        lang={code}
-                        onClick={() => !active && switchLang()}
-                        aria-pressed={active}
-                        aria-label={name}
-                        title={name}
-                        className={`flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-semibold transition-all duration-300 ${
-                            active
-                                ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-700 dark:text-white"
-                                : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100 opacity-70 hover:opacity-100"
-                        }`}
-                    >
-                        <Flag />
-                        {label}
-                    </button>
-                );
-            })}
-        </div>
+            {/* =========== CURRENT LANGUAGE CODE (opposite side of the knob) =========== */}
+            <span
+                className={`absolute text-[11px] font-bold text-zinc-600 dark:text-zinc-300 transition-all duration-300 ${
+                    isEn ? "left-2.5" : "right-2.5"
+                }`}
+            >
+                {isEn ? "EN" : "ES"}
+            </span>
+
+            {/* =========== SLIDING KNOB WITH FLAG =========== */}
+            <span
+                className={`absolute top-[3px] left-[3px] w-6 h-6 rounded-full overflow-hidden shadow ring-1 ring-black/10 transition-transform duration-300 ease-out ${
+                    isEn ? "translate-x-[36px]" : "translate-x-0"
+                }`}
+            >
+                {isEn ? <FlagUS /> : <FlagMX />}
+            </span>
+        </button>
     );
 }
 
