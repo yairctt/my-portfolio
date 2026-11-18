@@ -1,5 +1,4 @@
-import { AppContext } from "../App.jsx";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Navbar from "../components/Navbar.jsx";
@@ -13,7 +12,6 @@ import EducationAndExperience from "../components/sections/EducationAndExperienc
 import Skills from "../components/sections/Skills.jsx";
 
 function Homepage() {
-  const { theme } = useContext(AppContext);
   const location = useLocation();
 
   useEffect(() => {
@@ -32,7 +30,7 @@ function Homepage() {
         <Contact />
 
         <hr className="mt-12 border border-zinc-300 dark:border-zinc-800" />
-        <Footer theme={theme} />
+        <Footer />
         <BackToTop />
       </div>
     </div>
