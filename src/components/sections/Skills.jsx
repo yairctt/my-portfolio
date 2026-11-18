@@ -5,8 +5,8 @@ import user_info_es from "../../data/user_info_es.js";
 import { CgVercel } from "react-icons/cg";
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaJava, FaNodeJs, FaPython } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiBootstrap, SiCloudflare, SiGithub, SiGoogle, SiRedis } from "react-icons/si";
-import { TbMail } from "react-icons/tb";
+import { SiApache, SiBootstrap, SiCloudflare, SiDigitalocean, SiExpress, SiGithub, SiGoogle, SiJsonwebtokens, SiLeaflet, SiMysql, SiNextdotjs, SiPhp, SiPostgresql, SiRedis, SiSupabase, SiTypescript } from "react-icons/si";
+import { TbBrain, TbFileCode, TbMail, TbServer, TbSparkles, TbTestPipe } from "react-icons/tb";
 
 function Skills() {
   const { lang } = useContext(AppContext);
@@ -30,16 +30,49 @@ function Skills() {
           <IoLogoJavascript className="text-2xl" /> JavaScript
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiTypescript className="text-2xl" /> TypeScript
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <SiBootstrap className="text-2xl" /> Bootstrap
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <FaNodeJs className="text-2xl" /> Node.js
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiExpress className="text-2xl" /> Express
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiJsonwebtokens className="text-2xl" /> JWT
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiNextdotjs className="text-2xl" /> Next.js
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiLeaflet className="text-2xl" /> Leaflet
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiPhp className="text-2xl" /> PHP
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <TbTestPipe className="text-2xl" /> PHPUnit
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <FaJava className="text-2xl" /> Java
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <TbFileCode className="text-2xl" /> JavaCC
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <FaPython className="text-2xl" /> Python
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiMysql className="text-2xl" /> MySQL
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiPostgresql className="text-2xl" /> PostgreSQL
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiSupabase className="text-2xl" /> Supabase
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <FaGitAlt className="text-2xl" /> Git
@@ -51,6 +84,15 @@ function Skills() {
           <CgVercel className="text-2xl" /> Vercel
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiDigitalocean className="text-2xl" /> DigitalOcean
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <TbServer className="text-2xl" /> Hostinger
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <SiApache className="text-2xl" /> Apache
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <SiGoogle className="text-2xl" /> Google Workspace
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
@@ -58,6 +100,12 @@ function Skills() {
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <SiRedis className="text-2xl" /> Upstash Redis
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <TbSparkles className="text-2xl" /> Gemini API
+        </span>
+        <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+          <TbBrain className="text-2xl" /> DeepSeek API
         </span>
         <span className="inline-flex items-center justify-between gap-x-1.5 py-4 px-3 hover:-translate-y-1.5 transition-translate duration-500 rounded-xl font-medium bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
           <TbMail className="text-2xl" /> Resend

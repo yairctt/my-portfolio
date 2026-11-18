@@ -6,7 +6,8 @@ import { FaLandmark } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { PiCertificateFill } from "react-icons/pi";
-import { SiHackerrank, SiIbm } from "react-icons/si";
+import { CiLink } from "react-icons/ci";
+import { SiCisco, SiHackerrank, SiIbm } from "react-icons/si";
 
 function EducationAndExperience() {
   const { lang } = useContext(AppContext);
@@ -64,7 +65,7 @@ function EducationAndExperience() {
         <>
         <h4 className="text-xl dark:text-white mt-6 font-bold flex gap-2 items-center">
           <PiCertificateFill className="text-2xl text-red-800 dark:text-red-500" />
-          Certificates
+          {data.ui.sections.certificates}
         </h4>
         <div
           data-hs-carousel='{"loadingClasses": "opacity-0"}'
@@ -76,7 +77,9 @@ function EducationAndExperience() {
               {data.certificates.map((cert, index) => {
                 return (
                   <div className="hs-carousel-slide relative" key={index}>
-                    {cert.icon === "ibm" ? (
+                    {cert.icon === "cisco" ? (
+                      <SiCisco className="text-sky-600 dark:text-sky-400 absolute right-5 top-3 text-4xl" />
+                    ) : cert.icon === "ibm" ? (
                       <SiIbm className="text-blue-500 absolute right-5 top-0 text-5xl" />
                     ) : cert.icon === "google" ? (
                       <FcGoogle className="text-blue-500 absolute right-5 top-3 text-3xl" />
@@ -85,23 +88,26 @@ function EducationAndExperience() {
                     )}
 
                     <div className="flex justify-center items-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
-                      <div className="hs-tooltip [--placement:bottom] inline-block">
-                        <a href={cert.link} target="_blank" rel="noreferrer" className="hs-tooltip-toggle text-center text-gray-800 dark:text-white hover:text-red-800 hover:dark:text-red-500">
+                      {cert.link ? (
+                        <a href={cert.link} target="_blank" rel="noopener noreferrer" className="group/cert text-center text-gray-800 dark:text-white hover:text-red-800 hover:dark:text-red-500 transition-colors duration-300">
                           {/* =========== CERTIFICATE NAME =========== */}
-                          <p className=" transition duration-700 px-6 font-bold">
-                            {cert.title}
-                          </p>
+                          <p className="px-6 font-bold">{cert.title}</p>
                           {/* =========== CERTIFICATE DESCRIPTION =========== */}
-                          <p className=" transition duration-700 px-6 text-sm">
-                            {cert.description}
-                          </p>
+                          <p className="px-6 text-sm text-zinc-600 dark:text-zinc-400">{cert.description}</p>
+                          {/* =========== VIEW CERTIFICATE =========== */}
+                          <span className="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-red-800 dark:text-red-500 group-hover/cert:underline">
+                            <CiLink className="text-lg" aria-hidden="true" />
+                            {data.ui.sections.openCertificate}
+                          </span>
                         </a>
-
-                        {/* =========== TOOLTIP TEXT =========== */}
-                        <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-white border dark:border-zinc-800 dark:bg-zinc-950 text-xs font-medium dark:text-white rounded shadow-sm" role="tooltip">
-                          Open Certificate
-                        </span>
-                      </div>
+                      ) : (
+                        <div className="text-center text-gray-800 dark:text-white">
+                          {/* =========== CERTIFICATE NAME =========== */}
+                          <p className="px-6 font-bold">{cert.title}</p>
+                          {/* =========== CERTIFICATE DESCRIPTION =========== */}
+                          <p className="px-6 text-sm text-zinc-600 dark:text-zinc-400">{cert.description}</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -109,6 +115,8 @@ function EducationAndExperience() {
             </div>
           </div>
 
+          {data.certificates.length > 1 && (
+          <>
           <button
             type="button"
             className="hs-carousel-prev hs-carousel:disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-[46px] h-full text-gray-800 hover:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10"
@@ -165,6 +173,8 @@ function EducationAndExperience() {
               );
             })}
           </div>
+          </>
+          )}
         </div>
         </>
         )}

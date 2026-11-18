@@ -9,10 +9,10 @@ export const AppContext = createContext();
 
 function App() {
 	const savedTheme = localStorage.getItem("theme");
-    const [theme, setTheme] = useState(savedTheme || "dark");
+    const [theme, setTheme] = useState(savedTheme || "light");
 
     const savedLang = localStorage.getItem("lang");
-    const [lang, setLang] = useState(savedLang || "en");
+    const [lang, setLang] = useState(savedLang || "es");
 
 	useEffect(() => {
         document.documentElement.classList.toggle("dark", theme === "dark");
@@ -22,6 +22,10 @@ function App() {
 	const switchTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
     };
+
+    useEffect(() => {
+        document.documentElement.lang = lang;
+    }, [lang]);
 
     const switchLang = () => {
         const next = lang === "en" ? "es" : "en";

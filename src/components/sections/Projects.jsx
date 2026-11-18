@@ -9,22 +9,29 @@ function Projects() {
   const data = lang === "es" ? user_info_es : user_info;
 
   return (
-    <section
-      id="projects"
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:px-16"
-    >
-      {data.projects.map((project, index) => {
-        return (
+    <section id="projects" className="px-4 lg:px-16 scroll-mt-8">
+      {/* =========== PROJECTS TITLE =========== */}
+      <h4 className="text-4xl font-bold text-center dark:text-white">
+        {data.ui.sections.projects}
+      </h4>
+
+      {/* =========== PROJECTS GRID =========== */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-10">
+        {data.projects.map((project) => (
           <Project
-            key={index}
+            key={project.title}
             title={project.title}
             description={project.description}
             technologies={project.technologies}
             github={project.github}
             link={project.link}
+            privateReason={project.privateReason}
+            image={project.image}
+            role={project.role}
+            labels={data.ui.projects}
           />
-        );
-      })}
+        ))}
+      </div>
     </section>
   );
 }
