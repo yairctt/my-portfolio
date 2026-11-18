@@ -59,7 +59,7 @@ function Navbar() {
       <nav className="flex items-center justify-between gap-4 h-14 px-4 lg:px-16">
         {/* =========== NAME / HOME =========== */}
         <a href="#hero" onClick={() => setOpen(false)} className="font-black text-zinc-900 dark:text-white tracking-tight whitespace-nowrap">
-          Yair Cruz<span className="text-red-800 dark:text-red-500">.</span>
+          Yair Torres
         </a>
 
         {/* =========== SECTION LINKS (desktop) =========== */}
