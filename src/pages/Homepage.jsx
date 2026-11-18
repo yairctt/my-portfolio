@@ -11,7 +11,6 @@ import Contact from "../components/sections/Contact.jsx";
 import Footer from "../components/sections/Footer.jsx";
 import EducationAndExperience from "../components/sections/EducationAndExperience.jsx";
 import Skills from "../components/sections/Skills.jsx";
-import Achievements from "../components/sections/Achievements.jsx";
 
 function Homepage() {
   const { theme, switchTheme } = useContext(AppContext);
@@ -33,7 +32,6 @@ function Homepage() {
 
         <Hero />
         <Projects />
-        <Achievements />
 				<EducationAndExperience />
         <Skills />
         <Contact />

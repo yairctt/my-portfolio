@@ -171,30 +171,6 @@ const info = {
         },
     ],
 
-    // ============ ACHIEVEMENTS ============
-    achievements: [
-        {
-            value: "3rd Place",
-            title: "Veracruz Tech Week 2026 Hackathon",
-            detail: "Pulso Jarocho, a tourism PWA built in 24 hours by a team of five.",
-        },
-        {
-            value: "212",
-            title: "Students with access",
-            detail: "ISC Tutoring Portal and MiTutorIA, both in production.",
-        },
-        {
-            value: "90.07",
-            title: "GPA",
-            detail: "Computer Systems Engineering, Instituto Tecnológico de Veracruz.",
-        },
-        {
-            value: "CCNA",
-            title: "Switching, Routing, and Wireless Essentials",
-            detail: "Cisco Networking Academy, 2026.",
-        },
-    ],
-
     // ============ SOFT SKILLS & LANGUAGES ============
     softSkills: ["Self-taught", "Problem analysis and solving", "Organization", "Teamwork", "Client communication"],
     languages: [
@@ -238,7 +214,6 @@ const info = {
             contact: "Contact",
         },
         sections: {
-            achievements: "Achievements",
             softSkills: "Soft Skills",
             languages: "Languages",
             certificates: "Certificates",

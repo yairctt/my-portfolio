@@ -171,30 +171,6 @@ const info_es = {
         },
     ],
 
-    // ============ ACHIEVEMENTS ============
-    achievements: [
-        {
-            value: "3er lugar",
-            title: "Hackathon Veracruz Tech Week 2026",
-            detail: "Pulso Jarocho, PWA de turismo desarrollada en 24 horas con un equipo de 5.",
-        },
-        {
-            value: "212",
-            title: "Alumnos con acceso",
-            detail: "Portal de Tutorías ISC y MiTutorIA, ambos en producción.",
-        },
-        {
-            value: "90.07",
-            title: "Promedio",
-            detail: "Ingeniería en Sistemas Computacionales, Instituto Tecnológico de Veracruz.",
-        },
-        {
-            value: "CCNA",
-            title: "Switching, Routing, and Wireless Essentials",
-            detail: "Cisco Networking Academy, 2026.",
-        },
-    ],
-
     // ============ SOFT SKILLS & LANGUAGES ============
     softSkills: ["Autodidacta", "Análisis y resolución de problemas", "Organización", "Trabajo en equipo", "Comunicación con clientes"],
     languages: [
@@ -238,7 +214,6 @@ const info_es = {
             contact: "Contacto",
         },
         sections: {
-            achievements: "Logros",
             softSkills: "Habilidades",
             languages: "Idiomas",
             certificates: "Certificaciones",
