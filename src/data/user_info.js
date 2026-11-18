@@ -185,15 +185,25 @@ const info = {
     },
 
     // ============ FOOTER ============
-    footer: "© 2026 Yair Cruz Torres. All Rights Reserved",
+    footer: "Yair Cruz Torres. All rights reserved.",
 
     // ============ UI LABELS ============
     ui: {
+        meta: {
+            title: "Yair Cruz Torres | Portfolio",
+        },
+        notFound: {
+            title: "Page not found",
+            text: "The page you are looking for does not exist or was moved.",
+            button: "Back to home",
+        },
         hero: {
             greeting: "Hi, thanks for visiting my portfolio",
             photoAlt: "Photo of Yair Cruz Torres",
         },
         projects: {
+            enlarge: "Enlarge screenshot",
+            close: "Close",
             filters: {
                 all: "All",
                 client: "Clients",
@@ -209,6 +219,9 @@ const info = {
             role: "Role",
         },
         nav: {
+            experience: "Experience",
+            skills: "Skills",
+            menu: "Menu",
             projects: "Projects",
             downloadCv: "Download CV",
             contact: "Contact",

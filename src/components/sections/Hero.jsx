@@ -10,12 +10,12 @@ function Hero() {
   const data = lang === "es" ? user_info_es : user_info;
 
   return (
-    <section id="hero" className="pb-28 pt-24 sm:pt-28 md:pt-44 flex px-6 lg:px-24">
+    <section id="hero" className="pb-28 pt-16 sm:pt-20 md:pt-32 flex px-6 lg:px-24">
       <div className="self-center">
         <div className="hs-tooltip [--placement:right] w-20 hs-tooltip-toggle">
           <img
             src={data.main.photo}
-            className="rounded-full mb-6 lg:hidden"
+            className="size-20 rounded-full object-cover mb-6 lg:hidden"
             alt={data.ui.hero.photoAlt}
           />
 

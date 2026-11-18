@@ -185,15 +185,25 @@ const info_es = {
     },
 
     // ============ FOOTER ============
-    footer: "© 2026 Yair Cruz Torres. Todos los derechos reservados.",
+    footer: "Yair Cruz Torres. Todos los derechos reservados.",
 
     // ============ UI LABELS ============
     ui: {
+        meta: {
+            title: "Yair Cruz Torres | Portafolio",
+        },
+        notFound: {
+            title: "Página no encontrada",
+            text: "La dirección que buscas no existe o fue movida.",
+            button: "Volver al inicio",
+        },
         hero: {
             greeting: "Hola, gracias por visitar mi portafolio",
             photoAlt: "Foto de Yair Cruz Torres",
         },
         projects: {
+            enlarge: "Ampliar captura",
+            close: "Cerrar",
             filters: {
                 all: "Todos",
                 client: "Clientes",
@@ -209,6 +219,9 @@ const info_es = {
             role: "Rol",
         },
         nav: {
+            experience: "Experiencia",
+            skills: "Tecnologías",
+            menu: "Menú",
             projects: "Proyectos",
             downloadCv: "Descargar CV",
             contact: "Contacto",

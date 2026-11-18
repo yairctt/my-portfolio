@@ -1,25 +1,33 @@
 import { useContext } from "react";
-import { CgDarkMode } from "react-icons/cg";
+import { TbMoon, TbSun } from "react-icons/tb";
 import { AppContext } from "../App.jsx";
 
-function ToggleTheme({ switchTheme }) {
-    const { lang, theme } = useContext(AppContext);
+function ToggleTheme() {
+    const { lang, theme, switchTheme } = useContext(AppContext);
+    const isDark = theme === "dark";
     const label =
         lang === "es"
-            ? theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
-            : theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+            ? isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+            : isDark ? "Switch to light mode" : "Switch to dark mode";
 
     return (
-        <div className="hs-tooltip [--placement:bottom] inline-block">
-            <button onClick={switchTheme} className="hs-tooltip-toggle flex items-center text-2xl text-zinc-500 dark:text-zinc-300 hover:text-zinc-700 dark:hover:text-zinc-100 transition-all duration-300" aria-label={label}>
-                <CgDarkMode />
-
-                {/* =========== TOOLTIP TEXT =========== */}
-                <span className="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-white border dark:border-zinc-800 dark:bg-zinc-950 text-xs font-medium dark:text-white rounded shadow-sm" role="tooltip">
-                    {label}
-                </span>
-            </button>
-        </div>
+        <button
+            type="button"
+            onClick={switchTheme}
+            aria-label={label}
+            title={label}
+            className="relative flex items-center justify-center size-8 rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 hover:border-zinc-400 hover:text-zinc-900 dark:hover:border-zinc-500 dark:hover:text-white transition-colors duration-300 overflow-hidden"
+        >
+            {/* Moon in light mode (go dark), sun in dark mode (go light); they swap with a small rotation */}
+            <TbMoon
+                aria-hidden="true"
+                className={`absolute text-lg transition-all duration-300 ${isDark ? "opacity-0 -rotate-90 scale-50" : "opacity-100 rotate-0 scale-100"}`}
+            />
+            <TbSun
+                aria-hidden="true"
+                className={`absolute text-lg transition-all duration-300 ${isDark ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-90 scale-50"}`}
+            />
+        </button>
     );
 }
 

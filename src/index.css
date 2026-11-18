@@ -12,6 +12,17 @@
   scroll-behavior: smooth;
 }
 
+/* Leave room for the sticky navbar when jumping to a section */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;

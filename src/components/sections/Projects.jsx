@@ -24,7 +24,7 @@ function Projects() {
   const visible = filter === "all" ? data.projects : data.projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="px-4 lg:px-16 scroll-mt-8">
+    <section id="projects" className="px-4 lg:px-16">
       {/* =========== PROJECTS TITLE =========== */}
       <h4 className="text-4xl font-bold text-center dark:text-white">
         {data.ui.sections.projects}
